@@ -28,6 +28,10 @@ def make_dict():
     del dictionary[""]
     return dictionary.most_common(5000)
 
+@app.route('/')
+def test():
+    return "hello"
+
 @app.route('/classify', methods=['POST'])
 def flasktest():
     clf = load("classifymodel.mdl")
