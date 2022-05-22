@@ -46,6 +46,3 @@ def flasktest():
     print(res[0])
     return jsonify({"result": str(res[0])})
 
-if __name__ == "__main__":
-  app.run()
-
