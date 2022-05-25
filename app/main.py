@@ -3,8 +3,11 @@ import pickle as c
 import os
 from sklearn import *
 from collections import Counter
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 def load(clf_file):
     clf = c.load(open(clf_file, 'rb'))
